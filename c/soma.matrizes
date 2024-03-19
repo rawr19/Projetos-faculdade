@@ -1,0 +1,42 @@
+/* O programa tem como objetivo fazer a soma das matrizes sendo das colunas com as linhas /*
+
+#include <stdio.h>
+#include <math.h>
+
+void fillMatrix(int matrix[][30], int rows, int cols) {
+    printf("Preencha a matriz:\n");
+    
+    for (int i = 0; i < rows; i++) {
+    for (int j = 0; j < cols; j++) {
+            printf("Valor para a posicao [%d][%d]: ", i, j);
+            scanf("%d", &matrix[i][j]);
+        }
+    }
+}
+
+void sumMatrix(int matrix[][30], int rows, int cols) {
+    int sum = 0;
+    
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            sum += matrix[i][j];
+        }
+    }
+    
+    printf("A soma dos elementos da matriz e: %d\n", sum);
+}
+
+int main() {
+    int rows, cols;
+    int matrix[30][30]; 
+    
+    printf("Informe o numero de linhas da matriz: ");
+    scanf("%d", &rows);
+    printf("Informe o numero de colunas da matriz: ");
+    scanf("%d", &cols);
+    
+    fillMatrix(matrix, rows, cols);
+    sumMatrix(matrix, rows, cols);
+
+    return 0;
+}
