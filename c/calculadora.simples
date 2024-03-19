@@ -9,7 +9,7 @@ int main() {
     scanf("%f", &n1);
 
     printf("Digite o operador (+, -, x, /): ");
-    scanf(" %c", &op);
+    scanf("%c", &op);
 
     printf("Digite o segundo numero: ");
     scanf("%f", &n2);
