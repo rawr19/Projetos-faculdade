@@ -1,0 +1,45 @@
+/* Esse codigo tem como objetivo descobrir o tempo decorrido entre 2 instantes distintos /*
+
+#include <stdio.h>
+
+int res(int hora, int hora1, int min, int min1, int seg, int seg1) {
+    int tempo = hora * 3600 + min * 60 + seg;
+    int tempo1 = hora1 * 3600 + min1 * 60 + seg1;
+
+    if tempo1 < tempo) {
+        printf ("O tempo no segundo intervalo não pode ser menor que no primeiro.\n");
+        return -1; 
+    }
+
+    return tempo1 - tempo;
+}
+
+int main() {
+    int hora = 23, hora1 = 23, min = 59, min1 = 59, seg = 59, seg1 = 59;
+
+    printf("Informe o tempo no primeiro instante:\n");
+    scanf("%d %d %d", &hora, &min, &seg);
+    printf("Informe o tempo no segundo instante:\n");
+    scanf("%d %d %d", &hora1, &min1, &seg1);
+
+    if (hora >= 24 || hora1 >= 24) {
+        printf("Digite a hora no intervalo de 0...23.\n");
+        return 0; 
+    }
+    if (min >= 60 || min1 >= 60) {
+        printf("Digite o minuto no intervalo de 0...59.\n");
+        return 0; 
+    }
+    if (seg >= 60 || seg1 >= 60) {
+        printf("Digite o segundo no intervalo de 0...59.\n");
+        return 0; 
+    }
+ t
+    int total = res(hora, hora1, min, min1, seg, seg1);
+
+    if (total >= 0) {
+        printf("Valor decorrido: %d segundos.\n", total);
+    }
+
+    return 0;
+}
