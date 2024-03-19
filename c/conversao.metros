@@ -1,0 +1,43 @@
+/* Este codigo vai fazer a conversao de metros para diferentes unidades /*
+
+#include <stdio.h>
+
+int main() {
+    float n, res;
+    char conv;
+
+    printf("Digite o valor de N em metros: ");
+    scanf("%f", &n);
+
+    printf("Digite para qual unidade voce quer converter (km, dm, cm, mm, um, nm): ");
+    scanf(" %c", &conv);
+
+    switch (conv) {
+        case 'km':
+            res = n * 1000;
+            printf("Resultado: %.2f\n", res);
+            break;
+        case 'dm':
+            res = n * 10;
+            printf("Resultado: %.2f\n", res);
+            break;
+        case 'cm':
+            res = n * 100;
+            printf("Resultado: %.2f\n", res);
+            break;
+        case 'mm':
+            res = n / 1000;
+            printf("Resultado: %.2f\n", res);
+            break;
+        case 'um':
+            res = n * 1000000;
+            printf("Resultado: %.2f\n", res);
+            break;
+        case 'nm':
+            res = n * 1000000000;
+            printf("Resultado: %.2f\n", res);
+            break;
+    }
+
+    return 0;
+}
